@@ -1,0 +1,28 @@
+# Executáveis e ficheiros de compilação
+*.o
+*.a
+*.so
+*.dylib
+*.app
+Makefile*
+Trem
+.qmake.stash
+
+# Ficheiros gerados pelo MOC e UI do Qt
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+
+# Ficheiros de configuração do utilizador no Qt Creator
+*.pro.user
+*.pro.user.*
+
+# Diretórios de build (Build Shadow)
+build-*/
+build/
+
+# Ficheiros do sistema/IDE
+.DS_Store
+.vscode/
+.idea/
