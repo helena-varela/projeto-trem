@@ -19,8 +19,8 @@
      <rect>
       <x>60</x>
       <y>30</y>
-      <width>21</width>
-      <height>17</height>
+      <width>20</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -35,8 +35,8 @@
      <rect>
       <x>330</x>
       <y>30</y>
-      <width>21</width>
-      <height>17</height>
+      <width>20</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -51,8 +51,8 @@
      <rect>
       <x>600</x>
       <y>30</y>
-      <width>21</width>
-      <height>17</height>
+      <width>20</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -67,8 +67,8 @@
      <rect>
       <x>60</x>
       <y>150</y>
-      <width>21</width>
-      <height>17</height>
+      <width>20</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -83,8 +83,8 @@
      <rect>
       <x>330</x>
       <y>150</y>
-      <width>21</width>
-      <height>17</height>
+      <width>20</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -99,8 +99,8 @@
      <rect>
       <x>600</x>
       <y>150</y>
-      <width>21</width>
-      <height>17</height>
+      <width>20</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -242,7 +242,7 @@
      <x>0</x>
      <y>0</y>
      <width>641</width>
-     <height>22</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
