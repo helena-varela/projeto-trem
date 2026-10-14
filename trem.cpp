@@ -21,10 +21,10 @@ void Trem::run(){
             else if (x == 60 && y < 150)
                 y += 10;
             // 3. BASE: Se está em baixo e não chegou na direita, VAI PARA A DIREITA
-            else if (y == 150 && x < 600)
+            else if (y == 150 && x < 330)
                 x += 10;
             // 4. DIREITA: Se está na direita e não chegou no topo, SOBE
-            else if (x == 600 && y > 30)
+            else if (x == 330 && y > 30)
                 y -= 10;
             break;
         }
