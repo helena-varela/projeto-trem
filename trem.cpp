@@ -7,15 +7,15 @@ Trem::Trem(int ID, int x, int y){
     this->x = x;
     this->y = y;
     velocidade = 100;
-    
+
     //aqui cada trem recebe as coordenadas dos cantos de seu retângulo pra que run() fique mais limpo
     switch(ID) {
-        case 1: xEsq = 180; xDir = 720; yTopo = 40;  yBase = 180; break;
-        case 2: xEsq = 180; xDir = 450; yTopo = 180; yBase = 320; break;
-        case 3: xEsq = 450; xDir = 720; yTopo = 180; yBase = 320; break;
-        case 4: xEsq = 40;  xDir = 310; yTopo = 320; yBase = 460; break;
-        case 5: xEsq = 310; xDir = 580; yTopo = 320; yBase = 460; break;
-        case 6: xEsq = 580; xDir = 850; yTopo = 320; yBase = 460; break;
+        case A: xEsq = 180; xDir = 720; yTopo = 40;  yBase = 180; break;
+        case B: xEsq = 180; xDir = 450; yTopo = 180; yBase = 320; break;
+        case C: xEsq = 450; xDir = 720; yTopo = 180; yBase = 320; break;
+        case D: xEsq = 40;  xDir = 310; yTopo = 320; yBase = 460; break;
+        case E: xEsq = 310; xDir = 580; yTopo = 320; yBase = 460; break;
+        case F: xEsq = 580; xDir = 850; yTopo = 320; yBase = 460; break;
     }
 }
 

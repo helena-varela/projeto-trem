@@ -8,12 +8,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     // Criação dos trens com suas posições iniciais (ID, X, Y)
-    trem1 = new Trem(1, 450, 40);// A
-    trem2 = new Trem(2, 180, 250);//B
-    trem3 = new Trem(3, 720, 250);//C
-    trem4 = new Trem(4, 40, 380);// D
-    trem5 = new Trem(5, 450, 460);//E
-    trem6 = new Trem(6, 850, 380);//F
+    trem1 = new Trem(A, 450, 40);
+    trem2 = new Trem(B, 180, 250);
+    trem3 = new Trem(C, 720, 250);
+    trem4 = new Trem(D, 40, 380);
+    trem5 = new Trem(E, 450, 460);
+    trem6 = new Trem(F, 850, 380);
 
     // Conexão dos sinais updateGUI à interface
     connect(trem1, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int,int,int)));

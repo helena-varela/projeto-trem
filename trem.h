@@ -3,6 +3,15 @@
 
 #include <QThread>
 
+enum TremID {
+    A = 1,
+    B = 2,
+    C = 3,
+    D = 4,
+    E = 5,
+    F = 6
+};
+
 /*
  * Classe Trem herda QThread
  * Classe Trem passa a ser uma thread.
