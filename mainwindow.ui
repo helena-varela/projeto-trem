@@ -424,7 +424,6 @@
    <zorder>label_trilho4</zorder>
    <zorder>label_trilho4_2</zorder>
    <zorder>label_trilho1_2</zorder>
-   <zorder>label_trem3</zorder>
    <zorder>label_trilho1_3</zorder>
    <zorder>label_trilho4_3</zorder>
    <zorder>label_trilho4_4</zorder>
@@ -439,10 +438,11 @@
    <zorder>label_trilho2_8</zorder>
    <zorder>label_trilho4_9</zorder>
    <zorder>label_trem1</zorder>
+   <zorder>label_trem3</zorder>
+   <zorder>label_trem6</zorder>
+   <zorder>label_trem5</zorder>
    <zorder>label_trem2</zorder>
    <zorder>label_trem4</zorder>
-   <zorder>label_trem5</zorder>
-   <zorder>label_trem6</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
