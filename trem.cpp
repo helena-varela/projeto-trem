@@ -7,27 +7,34 @@ Trem::Trem(int ID, int x, int y){
     this->x = x;
     this->y = y;
     velocidade = 100;
+    
+    //aqui cada trem recebe as coordenadas dos cantos de seu retângulo pra que run() fique mais limpo
+    switch(ID) {
+        case 1: xEsq = 180; xDir = 720; yTopo = 40;  yBase = 180; break;
+        case 2: xEsq = 180; xDir = 450; yTopo = 180; yBase = 320; break;
+        case 3: xEsq = 450; xDir = 720; yTopo = 180; yBase = 320; break;
+        case 4: xEsq = 40;  xDir = 310; yTopo = 320; yBase = 460; break;
+        case 5: xEsq = 310; xDir = 580; yTopo = 320; yBase = 460; break;
+        case 6: xEsq = 580; xDir = 850; yTopo = 320; yBase = 460; break;
+    }
 }
 
 //Função a ser executada após executar trem->START
 void Trem::run(){
     while(true){
-        switch(ID){
-            case 1: // Trem 1
-                // 1. TOPO: Se está em cima e não chegou na esquerda, VAI PARA A ESQUERDA
-                if (y == 40 && x > 180)
-                    x -= 10;
-                // 2. ESQUERDA: Se está na esquerda e não chegou na base, DESCE
-                else if (x == 180 && y < 180)
-                    y += 10;
-                // 3. BASE: Se está em baixo e não chegou na direita, VAI PARA A DIREITA
-                else if (y == 180 && x < 720)
-                    x += 10;
-                // 4. DIREITA: Se está na direita e não chegou no topo, SOBE
-                else if (x == 720 && y > 40)
-                    y -= 10;
-                break;
-        }
+        //TOPO: Se está em cima e não chegou na esquerda, VAI PARA A ESQUERDA
+        if (y == yTopo && x > xEsq)
+            x -= 10;
+        //ESQUERDA: Se está na esquerda e não chegou na base, DESCE
+        else if (x == xEsq && y < yBase)
+            y += 10;
+        //BASE: Se está na base e não chegou na direita, VAI PARA A DIREITA
+        else if (y == yBase && x < xDir)
+            x += 10;
+        //DIREITA: Se está na direita e não chegou no topo, SOBE
+        else if (x == xDir && y > yTopo)
+            y -= 10;
+
         emit updateGUI(ID, x, y);
         msleep(velocidade);
     }
