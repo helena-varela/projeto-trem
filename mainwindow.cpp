@@ -35,13 +35,13 @@ MainWindow::MainWindow(QWidget *parent) :
 // Atualização da posição dos trens na tela
 void MainWindow::updateInterface(int id, int x, int y){
     switch(id){
-    case 1: ui->label_trem1->setGeometry(x, y, 20, 20); break;
-    case 2: ui->label_trem2->setGeometry(x, y, 20, 20); break;
-    case 3: ui->label_trem3->setGeometry(x, y, 20, 20); break;
-    case 4: ui->label_trem4->setGeometry(x, y, 20, 20); break;
-    case 5: ui->label_trem5->setGeometry(x, y, 20, 20); break;
-    case 6: ui->label_trem6->setGeometry(x, y, 20, 20); break;
-    default: break;
+        case A: ui->label_trem1->setGeometry(x, y, 20, 20); break;
+        case B: ui->label_trem2->setGeometry(x, y, 20, 20); break;
+        case C: ui->label_trem3->setGeometry(x, y, 20, 20); break;
+        case D: ui->label_trem4->setGeometry(x, y, 20, 20); break;
+        case E: ui->label_trem5->setGeometry(x, y, 20, 20); break;
+        case F: ui->label_trem6->setGeometry(x, y, 20, 20); break;
+        default: break;
     }
 }
 
