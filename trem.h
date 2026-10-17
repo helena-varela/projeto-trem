@@ -2,6 +2,7 @@
 #define TREM_H
 
 #include <QThread>
+#include <QMutex>
 
 enum TremID {
     A = 1,
@@ -11,6 +12,16 @@ enum TremID {
     E = 5,
     F = 6
 };
+
+extern QMutex mutex1;
+extern QMutex mutex2;
+extern QMutex mutex3;
+extern QMutex mutex4;
+extern QMutex mutex5;
+extern QMutex mutex6;
+extern QMutex mutex7;
+extern QMutex mutex8;
+extern QMutex mutex9;
 
 /*
  * Classe Trem herda QThread
@@ -35,8 +46,9 @@ private:
    int y;           //posição Y do trem na tela
    int ID;          //ID do trem
    int velocidade;  //Velocidade. É o tempo de dormir em milisegundos entre a mudança de posição do trem
-
    int xEsq, xDir, yTopo, yBase;
+
+   void verificarMutex(int px, int py);
 };
 
 #endif // TREM_H
