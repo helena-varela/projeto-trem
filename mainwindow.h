@@ -19,6 +19,18 @@ public:
 public slots:
     void updateInterface(int, int, int);
 
+public slots:
+    // sliders individuais
+    void on_slider_a_valueChanged(int value);
+    void on_slider_b_valueChanged(int value);
+    void on_slider_c_valueChanged(int value);
+    void on_slider_d_valueChanged(int value);
+    void on_slider_e_valueChanged(int value);
+    void on_slider_f_valueChanged(int value);
+
+    // para o slider mestre
+    void on_slider_m_valueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
 
