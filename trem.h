@@ -3,6 +3,7 @@
 
 #include <QThread>
 #include <QMutex>
+#include <atomic>
 
 enum TremID {
     A = 1,
@@ -35,7 +36,7 @@ class Trem: public QThread{
 public:
     Trem(int,int,int);  //construtor
     void run();         //função a ser executada pela thread
-
+    void setVelocidade(int novaVelocidade);//  para alterar a velocidade
 
 //Cria um sinal
 signals:
@@ -45,8 +46,9 @@ private:
    int x;           //posição X do trem na tela
    int y;           //posição Y do trem na tela
    int ID;          //ID do trem
-   int velocidade;  //Velocidade. É o tempo de dormir em milisegundos entre a mudança de posição do trem
    int xEsq, xDir, yTopo, yBase;
+
+   std::atomic<int> velocidade;
 
    void verificarMutex(int px, int py);
 };

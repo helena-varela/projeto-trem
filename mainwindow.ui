@@ -30,10 +30,7 @@
      <string>A</string>
     </property>
     <property name="textFormat">
-     <enum>Qt::TextFormat::AutoText</enum>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+     <enum>Qt::PlainText</enum>
     </property>
    </widget>
    <widget class="QLabel" name="label_trem2">
@@ -51,9 +48,6 @@
     <property name="text">
      <string>B</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
    </widget>
    <widget class="QLabel" name="label_trem3">
     <property name="geometry">
@@ -69,9 +63,6 @@
     </property>
     <property name="text">
      <string>C</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_trem4">
@@ -89,9 +80,6 @@
     <property name="text">
      <string>D</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
    </widget>
    <widget class="QLabel" name="label_trem5">
     <property name="geometry">
@@ -108,9 +96,6 @@
     <property name="text">
      <string>E</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
    </widget>
    <widget class="QLabel" name="label_trem6">
     <property name="geometry">
@@ -126,9 +111,6 @@
     </property>
     <property name="text">
      <string>F</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_trilho1">
@@ -439,9 +421,6 @@
     <property name="text">
      <string>1</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
    </widget>
    <widget class="QLabel" name="label_trem2_3">
     <property name="geometry">
@@ -462,9 +441,6 @@
     </property>
     <property name="text">
      <string>2</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_trem2_4">
@@ -487,9 +463,6 @@
     <property name="text">
      <string>3</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
    </widget>
    <widget class="QLabel" name="label_trem2_5">
     <property name="geometry">
@@ -510,9 +483,6 @@
     </property>
     <property name="text">
      <string>4</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_trem2_6">
@@ -535,9 +505,6 @@
     <property name="text">
      <string>5</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
    </widget>
    <widget class="QLabel" name="label_trem2_7">
     <property name="geometry">
@@ -558,9 +525,6 @@
     </property>
     <property name="text">
      <string>6</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_trem2_8">
@@ -583,9 +547,6 @@
     <property name="text">
      <string>7</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
    </widget>
    <widget class="QLabel" name="label_trem2_9">
     <property name="geometry">
@@ -606,9 +567,6 @@
     </property>
     <property name="text">
      <string>8</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_trem2_10">
@@ -631,8 +589,117 @@
     <property name="text">
      <string>9</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+   </widget>
+   <widget class="QSlider" name="slider_a">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_b">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_c">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>90</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_d">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>120</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_e">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>160</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_f">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>200</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_m">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>250</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
    <zorder>label_trilho1</zorder>
@@ -668,6 +735,13 @@
    <zorder>label_trem2_8</zorder>
    <zorder>label_trem2_9</zorder>
    <zorder>label_trem2_10</zorder>
+   <zorder>slider_a</zorder>
+   <zorder>slider_b</zorder>
+   <zorder>slider_c</zorder>
+   <zorder>slider_d</zorder>
+   <zorder>slider_e</zorder>
+   <zorder>slider_f</zorder>
+   <zorder>slider_m</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -675,7 +749,7 @@
      <x>0</x>
      <y>0</y>
      <width>950</width>
-     <height>23</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

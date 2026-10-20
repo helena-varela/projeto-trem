@@ -29,26 +29,41 @@ Trem::Trem(int ID, int x, int y){
     }
 }
 
-//Função a ser executada após executar trem->START
-void Trem::run(){
-    while(true){
+void Trem::setVelocidade(int novaVelocidade) {
+    this->velocidade.store(novaVelocidade);
+}
+
+void Trem::run() {
+    while(true) {
+        int vel = velocidade.load();
+
+        // se a velocidade for 0 o trem para
+        if (vel == 0) {
+          msleep(100);
+          continue;
+        }
+
+        // verifica se precisa de bloquear mutexes para a posição atual
         verificarMutex(x, y);
 
-        //TOPO: Se está em cima e não chegou na esquerda, VAI PARA A ESQUERDA
+        // movimentação anti horario
+        // se está em cima e não chegou na esquerda, vai pra esquerda
         if (y == yTopo && x > xEsq)
             x -= 10;
-        //ESQUERDA: Se está na esquerda e não chegou na base, DESCE
+        // se está na esquerda e não chegou na base, desce
         else if (x == xEsq && y < yBase)
             y += 10;
-        //BASE: Se está na base e não chegou na direita, VAI PARA A DIREITA
+        // se está na base e não chegou na direita, vai para a direita
         else if (y == yBase && x < xDir)
             x += 10;
-        //DIREITA: Se está na direita e não chegou no topo, SOBE
+        // se está na direita e não chegou no topo, sobe
         else if (x == xDir && y > yTopo)
             y -= 10;
 
         emit updateGUI(ID, x, y);
-        msleep(velocidade);
+
+        int tempoEspera = 202 - vel;
+        msleep(tempoEspera);
     }
 }
 
