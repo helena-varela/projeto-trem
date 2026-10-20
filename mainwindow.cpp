@@ -23,6 +23,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(trem5, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int,int,int)));
     connect(trem6, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int,int,int)));
 
+    ui->slider_m->setValue(100);
+
     // Inicialização automática do movimento dos trens (Threads)
     trem1->start();
     trem2->start();
