@@ -32,6 +32,23 @@ MainWindow::MainWindow(QWidget *parent) :
     trem6->start();
 }
 
+// sliders individuais que alteram a velocidade apenas do seu respetivo comboio
+void MainWindow::on_slider_a_valueChanged(int value) { trem1->setVelocidade(value); }
+void MainWindow::on_slider_b_valueChanged(int value) { trem2->setVelocidade(value); }
+void MainWindow::on_slider_c_valueChanged(int value) { trem3->setVelocidade(value); }
+void MainWindow::on_slider_d_valueChanged(int value) { trem4->setVelocidade(value); }
+void MainWindow::on_slider_e_valueChanged(int value) { trem5->setVelocidade(value); }
+void MainWindow::on_slider_f_valueChanged(int value) { trem6->setVelocidade(value); }
+
+// slider mestre que sobrescreve a velocidade de todos e atualiza a posição dos sliders na tela
+void MainWindow::on_slider_m_valueChanged(int value) {
+  ui->slider_a->setValue(value);
+  ui->slider_b->setValue(value);
+  ui->slider_c->setValue(value);
+  ui->slider_d->setValue(value);
+  ui->slider_e->setValue(value);
+  ui->slider_f->setValue(value);
+}
 // Atualização da posição dos trens na tela
 void MainWindow::updateInterface(int id, int x, int y){
     switch(id){
